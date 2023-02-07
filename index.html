@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <style>
+	
+	body {
+	background: #9D50BB;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6E48AA, #9D50BB);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6E48AA, #9D50BB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	}
+	
+    .board {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 5px;
+	text-align: center;
+	font-size: 50px;
+	width: 300px;
+	height: 300px;
+}
+.square {
+background-color: #f2f2f2;
+width: 100px;
+height: 100px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 2px solid black;
+color: transparent;
+transition: background-color 0.3s ease;
+}
+
+.square:hover {
+  background-color: #e8e8e8;
+}
+
+.message {
+position: fixed;
+font-size: 20px;
+text-align: center;
+top: 35% !important;
+margin-left: 16px;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#startButton {
+  margin-left: 16px;
+  top: 70%;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="board centered">
+      <div class="square" id="0"></div>
+      <div class="square" id="1"></div>
+      <div class="square" id="2"></div>
+      <div class="square" id="3"></div>
+      <div class="square" id="4"></div>
+      <div class="square" id="5"></div>
+      <div class="square" id="6"></div>
+      <div class="square" id="7"></div>
+      <div class="square" id="8"></div>
+    </div>
+    <div class="message centered" id="message"></div>
+    <button class="centered" id="startButton">Start/Restart</button>
+  </body>
+  <script src="app.js"></script>
+</html>
